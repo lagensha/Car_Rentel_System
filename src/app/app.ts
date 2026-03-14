@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -7,6 +7,15 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {
+export class App implements OnInit{
+   
   protected readonly title = signal('Car_Rental_System');
+
+   ngOnInit(): void {
+    initFlowbite();
+  }
 }
+function initFlowbite() {
+  throw new Error('Function not implemented.');
+}
+
