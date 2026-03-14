@@ -1,9 +1,9 @@
 import { Component, OnInit, signal } from '@angular/core';
-import { RouterOutlet, RouterLink } from '@angular/router';
+import { RouterOutlet} from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink],
+  imports: [RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -12,7 +12,7 @@ export class App implements OnInit{
   protected readonly title = signal('Car_Rental_System');
 
    ngOnInit(): void {
-    initFlowbite();
+    // initFlowbite();
   }
   
 }
