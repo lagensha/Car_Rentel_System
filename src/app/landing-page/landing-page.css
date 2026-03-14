@@ -1,0 +1,202 @@
+:root {
+  --gold: #ffb400;
+  --gold-glow: rgba(255, 180, 0, 0.3);
+  --bg-black: #050505;
+  --card-bg: #111111;
+  --glass: rgba(255, 255, 255, 0.03);
+  --text-dim: #999;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--bg-black);
+  color: rgb(9, 2, 2);
+  line-height: 1.6;
+}
+
+/* ===== Glass Navbar ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 8%;
+  position: fixed; /* Fixed for a modern feel */
+  width: 100%;
+  z-index: 100;
+  background: rgba(5, 5, 5, 0.8);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: white;
+}
+
+.logo { font-size: 1.5rem; font-weight: 800; letter-spacing: 3px; }
+.logo span { color: var(--gold); }
+
+.nav-links { display: flex; list-style: none; align-items: center; gap: 3rem; }
+.nav-links a { 
+  text-decoration: none; color: var(--text-dim); 
+  font-size: 0.85rem; text-transform: uppercase; 
+  letter-spacing: 1px; transition: 0.4s; 
+}
+.nav-links a:hover { color: var(--gold); text-shadow: 0 0 10px var(--gold-glow); }
+
+/* ===== Hero with Parallax Feel ===== */
+.hero {
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+  background-attachment: fixed; /* Parallax effect */
+}
+
+.hero-overlay {
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(0,0,0,0.3) 0%, var(--bg-black) 90%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5%;
+  color: #fff;
+}
+
+.hero-content h1 { 
+  font-size: clamp(2.5rem, 10vw, 5.5rem); 
+  line-height: 1.1;
+  font-weight: 900; 
+  margin-bottom: 20px;
+}
+
+/* ===== Floating Search Box ===== */
+.search-box {
+  background: rgba(20, 20, 20, 0.6);
+  backdrop-filter: blur(25px);
+  padding: 2rem;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.6);
+  margin-top: 40px;
+}
+
+.input-group label { color: var(--gold); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; }
+.input-group input { 
+  width: 100%; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); 
+  color: white; padding: 12px; border-radius: 8px; margin-top: 8px;
+}
+
+.search-btn {
+  background: var(--gold); color: rgb(236, 230, 230); border: none; font-weight: 800;
+  border-radius: 8px; cursor: pointer; transition: 0.3s;
+  padding: 12px; align-self: end;
+}
+.search-btn:hover { background: #fff; transform: scale(1.02); }
+
+/* ===== Categories Section ===== */
+.featured { 
+  padding: 100px 8%;
+  background-color: #111111;
+ }
+ .btn-primary {
+  background: #ffb400; /* Your signature gold */
+  color: #000; /* Deep black for contrast */
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow: 0 4px 15px rgba(255, 180, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover State */
+.btn-primary:hover {
+  background: #ffffff; /* Shifts to white for a clean "expensive" feel */
+  color: #000;
+  transform: translateY(-3px); /* Subtle lift */
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+}
+
+/* Active State (When clicked) */
+.btn-primary:active {
+  transform: translateY(-1px);
+}
+
+/* Optional: Adding a light sweep animation on hover */
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(45deg);
+  transition: 0.6s;
+  left: -150%;
+}
+
+.btn-primary:hover::after {
+  left: 100%;
+}
+.section-title { 
+  font-size: 2.5rem;
+   text-align: center;
+    margin-bottom: 50px;
+    color: #fff;
+   font-size: 3.0rem; font-weight: 800; z-index: 2;
+
+ }
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+.card {
+  height: 450px; border-radius: 25px; overflow: hidden;
+  position: relative; cursor: pointer;
+  transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: #fff;
+}
+
+.card span {
+  position: absolute; bottom: 30px; left: 30px;
+  font-size: 1.8rem; font-weight: 800; z-index: 2;
+}
+
+.card::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 60%);
+  transition: 0.4s;
+}
+
+/* Image Hover Zoom */
+.card:hover { transform: scale(1.02); border-color: var(--gold); box-shadow: 0 0 30px var(--gold-glow); }
+
+/* Specific Images */
+.card-1 { background: url('https://images.pexels.com/photos/110844/pexels-photo-110844.jpeg?auto=compress&cs=tinysrgb&w=800') center/cover;}
+/* NEW Luxury Image: Dark Mercedes-Maybach */
+.card-2 { background: url('https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80') center/cover; }
+.card-3 { background: url('https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=800&q=80') center/cover; }
+
+/* ===== Responsive Magic ===== */
+@media (max-width: 900px) {
+  .navbar { padding: 1rem 5%; }
+  .nav-links { display: none; }
+  .hero-content h1 { font-size: 3rem; }
+  .search-box { grid-template-columns: 1fr; }
+}
