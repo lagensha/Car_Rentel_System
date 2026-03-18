@@ -1,3 +1,102 @@
+/* ===== Footer Styles ===== */
+.footer {
+  background: #0a0a0a;
+  color: #fff;
+  padding: 3rem 8% 1.5rem 8%;
+  margin-top: 0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  font-family: 'Poppins', sans-serif;
+}
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.footer-brand {
+  flex: 1 1 220px;
+}
+.footer-logo {
+  font-size: 1.7rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #fff;
+}
+.footer-logo span {
+  color: var(--gold);
+}
+.footer-tagline {
+  color: var(--text-dim);
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+.footer-links {
+  flex: 2 1 300px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+}
+.footer-links a {
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s;
+  position: relative;
+}
+.footer-links a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px var(--gold-glow);
+}
+.footer-social {
+  flex: 1 1 180px;
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  justify-content: flex-end;
+}
+.social-icon {
+  color: var(--gold);
+  background: rgba(255,255,255,0.04);
+  border-radius: 50%;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.social-icon:hover {
+  background: var(--gold);
+  color: #0a0a0a;
+  transform: scale(1.1);
+}
+.footer-bottom {
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 0.95rem;
+  margin-top: 2.5rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding-top: 1.2rem;
+}
+
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.5rem;
+    padding: 0 2%;
+  }
+  .footer-social {
+    justify-content: flex-start;
+    margin-top: 1rem;
+  }
+}
 :root {
   --gold: #ffb400;
   --gold-glow: rgba(255, 180, 0, 0.3);
