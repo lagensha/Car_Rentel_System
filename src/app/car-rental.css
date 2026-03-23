@@ -1,15 +1,14 @@
-
 body {
 	background: #0f0f0f;
 }
 
-.catalog-container {
+.rental-container {
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 2.5rem 2% 3rem 2%;
 }
 
-.catalog-title {
+.rental-title {
 	color: #e2b96a;
 	text-align: center;
 	font-size: 2.7rem;
@@ -18,50 +17,13 @@ body {
 	letter-spacing: 2px;
 }
 
-.catalog-filters {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 1rem;
-	justify-content: center;
-	margin-bottom: 2.5rem;
-}
-
-.filter-input, .filter-select {
-	padding: 0.7rem 1.2rem;
-	border-radius: 1.5rem;
-	border: 1.5px solid #e2b96a;
-	background: #181818;
-	color: #fff;
-	font-size: 1rem;
-	outline: none;
-	transition: border 0.3s;
-}
-.filter-input:focus, .filter-select:focus {
-	border: 2px solid #fff;
-}
-.filter-btn {
-	background: #e2b96a;
-	color: #111;
-	font-weight: 700;
-	border: none;
-	border-radius: 1.5rem;
-	padding: 0.7rem 2rem;
-	cursor: pointer;
-	font-size: 1rem;
-	transition: background 0.3s, color 0.3s;
-}
-.filter-btn:hover {
-	background: #fff;
-	color: #e2b96a;
-}
-
-.car-grid {
+.rental-grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
 	gap: 2.2rem;
 }
 
-.car-card {
+.rental-card {
 	background: #181818;
 	border-radius: 1.7rem;
 	overflow: hidden;
@@ -71,13 +33,13 @@ body {
 	flex-direction: column;
 	border: 2.5px solid #e2b96a;
 }
-.car-card:hover {
+.rental-card:hover {
 	transform: translateY(-8px) scale(1.03);
 	box-shadow: 0 12px 40px rgba(226,185,106,0.18);
 	border-color: #fff;
 }
 
-.car-img {
+.rental-img {
 	width: 100%;
 	height: 180px;
 	object-fit: cover;
@@ -86,34 +48,34 @@ body {
 	background: #222;
 }
 
-.car-details {
+.rental-details {
 	padding: 1.3rem 1.2rem 1.5rem 1.2rem;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	gap: 0.5rem;
 }
-.car-model {
+.rental-model {
 	color: #e2b96a;
 	font-size: 1.4rem;
 	font-weight: 700;
 	margin-bottom: 0.2rem;
 	letter-spacing: 1px;
 }
-.car-brand {
+.rental-brand {
 	color: #fff;
 	font-size: 1.1rem;
 	font-weight: 600;
 	margin-bottom: 0.5rem;
 }
-.car-info {
+.rental-info {
 	display: flex;
 	gap: 1.2rem;
 	color: #fff;
 	font-size: 1rem;
 	margin-bottom: 0.7rem;
 }
-.car-info span {
+.rental-info span {
 	background: #222;
 	border-radius: 1rem;
 	padding: 0.3rem 1rem;
@@ -121,7 +83,7 @@ body {
 	font-weight: 600;
 	font-size: 0.98rem;
 }
-.car-price {
+.rental-price {
 	color: #fff;
 	background: #e2b96a;
 	border-radius: 1rem;
@@ -133,13 +95,13 @@ body {
 }
 
 @media (max-width: 700px) {
-	.catalog-title {
+	.rental-title {
 		font-size: 2rem;
 	}
-	.car-img {
+	.rental-img {
 		height: 130px;
 	}
-	.car-details {
+	.rental-details {
 		padding: 1rem 0.7rem 1.2rem 0.7rem;
 	}
 }

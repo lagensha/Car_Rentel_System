@@ -1,1 +1,85 @@
-<p>car-catalog works!</p>
+<link rel="stylesheet" href="car-catalog.css">
+<div class="catalog-container">
+	<h1 class="catalog-title">Available Cars</h1>
+	<div class="catalog-filters">
+		<input type="text" placeholder="Search by brand or model" class="filter-input">
+		<select class="filter-select">
+			<option value="">All Types</option>
+			<option value="SUV">SUV</option>
+			<option value="Sedan">Sedan</option>
+			<option value="Hatchback">Hatchback</option>
+			<option value="Sport">Sport</option>
+			<option value="Electric">Electric</option>
+		</select>
+		<input type="number" placeholder="Min Price" class="filter-input" min="0">
+		<input type="number" placeholder="Max Price" class="filter-input" min="0">
+		<button class="filter-btn">Filter</button>
+	</div>
+	<div class="car-grid">
+		<!-- Car Card 1 -->
+		<div class="car-card">
+			<img src="https://images.unsplash.com/photo-1511918984145-48de785d4c4e?auto=format&fit=crop&w=600&q=80" alt="Tesla Model S" class="car-img">
+			<div class="car-details">
+				<h2 class="car-model">Model S</h2>
+				<p class="car-brand">Tesla</p>
+				<div class="car-info">
+					<span>Electric</span>
+					<span>5 Seats</span>
+				</div>
+				<div class="car-price">$120/day</div>
+			</div>
+		</div>
+		<!-- Car Card 2 -->
+		<div class="car-card">
+			<img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=600&q=80" alt="BMW X5" class="car-img">
+			<div class="car-details">
+				<h2 class="car-model">X5</h2>
+				<p class="car-brand">BMW</p>
+				<div class="car-info">
+					<span>Diesel</span>
+					<span>7 Seats</span>
+				</div>
+				<div class="car-price">$150/day</div>
+			</div>
+		</div>
+		<!-- Car Card 3 -->
+		<div class="car-card">
+			<img src="https://images.unsplash.com/photo-1461632830798-3adb3034e4c8?auto=format&fit=crop&w=600&q=80" alt="Audi A4" class="car-img">
+			<div class="car-details">
+				<h2 class="car-model">A4</h2>
+				<p class="car-brand">Audi</p>
+				<div class="car-info">
+					<span>Petrol</span>
+					<span>5 Seats</span>
+				</div>
+				<div class="car-price">$100/day</div>
+			</div>
+		</div>
+		<!-- Car Card 4 -->
+		<div class="car-card">
+			<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80" alt="Mercedes G-Class" class="car-img">
+			<div class="car-details">
+				<h2 class="car-model">G-Class</h2>
+				<p class="car-brand">Mercedes</p>
+				<div class="car-info">
+					<span>Diesel</span>
+					<span>5 Seats</span>
+				</div>
+				<div class="car-price">$200/day</div>
+			</div>
+		</div>
+		<!-- Car Card 5 -->
+		<div class="car-card">
+			<img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=600&q=80" alt="Lamborghini Huracan" class="car-img">
+			<div class="car-details">
+				<h2 class="car-model">Huracan</h2>
+				<p class="car-brand">Lamborghini</p>
+				<div class="car-info">
+					<span>Petrol</span>
+					<span>2 Seats</span>
+				</div>
+				<div class="car-price">$350/day</div>
+			</div>
+		</div>
+	</div>
+</div>
